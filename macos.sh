@@ -27,6 +27,11 @@ sudo defaults write com.apple.applicationaccess allowAutoUnlock -bool true
 # Disable Tips
 defaults write com.apple.tips "AllowNotifications" -bool false
 
+# wifi calling
+defaults write com.apple.FaceTime CallsFromiPhone -bool TRUE
+defaults write com.apple.FaceTime AllowCallsFromiPhone -bool TRUE
+defaults write com.apple.FaceTime CallNoniPhone -bool TRUE # Optional: Allow calls *to* non-Apple devices
+
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
