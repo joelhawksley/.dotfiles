@@ -21,6 +21,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 CURRENT_USER=$(stat -f %Su /dev/console)
 USER_ID=$(id -u "$CURRENT_USER")
 
+# Allow watch unlock
+sudo defaults write com.apple.applicationaccess allowAutoUnlock -bool true
+
+# Disable Tips
+defaults write com.apple.tips "AllowNotifications" -bool false
+
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
