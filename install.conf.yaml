@@ -5,10 +5,5 @@
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
 
-- defaults:
-    brewfile:
-      include: ['tap', 'brew', 'cask', 'mas']
-
-- brewfile:
-    # This accepts the same options as `brew bundle` command:
-    file: Brewfile
+- apt:
+    - tig
